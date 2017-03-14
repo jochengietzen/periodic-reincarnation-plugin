@@ -8,7 +8,7 @@
     <name>Periodic Reincarnation Plugin</name>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>periodic-reincarnation</artifactId>
-    <version>1.10-SNAPSHOT</version>
+    <version>1.11-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <url>http://wiki.jenkins-ci.org/display/JENKINS/Periodic+Reincarnation+Plugin</url>
 
@@ -163,6 +163,13 @@
                 </executions>
                 <configuration>
                     <argLine>${argLine} -Xms128m -Xmx512m</argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
             </plugin>
         </plugins>
